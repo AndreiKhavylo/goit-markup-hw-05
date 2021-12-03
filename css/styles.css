@@ -379,7 +379,6 @@ body {
 
 .command-item {
   background: #ffffff;
-  padding-bottom: 30px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -401,12 +400,14 @@ body {
 .command-item {
   margin-right: 30px;
 }
-.command-item:last-child {
-  margin-right: 0;
+
+.command-box{
+  padding: 30px 32px;
 }
 
-.command-img {
-  margin-bottom: 30px;
+
+.command-item:last-child {
+  margin-right: 0;
 }
 
 .command-title-person {
@@ -448,29 +449,22 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  color: #afb1b8;
   background-color: var(--first-logo-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .command-social-link:hover,
 .command-social-link:focus {
   background-color: var(--accent-color);
+  color: #ffffff;
 }
 
-.command-social-link:hover .command-social-icon,
-.command-social-link:focus .command-social-icon {
-  fill: #ffffff;
-}
 
 .command-social-icon {
-  fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  fill: currentColor;
 
-.command-social-icon:hover,
-.command-social-icon:focus {
-  fill: #ffffff;
 }
 
 /*----------------------------------CLIENT---------------------------------*/
@@ -490,7 +484,7 @@ body {
 }
 
 .client-company-item {
-  width: 170x;
+  width: 170px;
   height: 92px;
   margin-right: 30px;
 }
@@ -505,21 +499,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .client-social-icon{
-  fill: #afb1b8;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: currentColor;
 }
 
 
 
-.client-social-icon:hover,
-.client-social-icon:focus {
-  fill: var(--accent-color);
+.client-company-link:hover,
+.client-company-link:focus {
+  color: var(--accent-color);
   border: 1px solid #2196f3;
 }
 
